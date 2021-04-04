@@ -24,13 +24,13 @@ In most use cases, `SQLAlchemy` is used as an **ORM** (Object-Relational Mapping
 
 ## How Do I Setup/Use Database Credential Configuration?
 
-In the Python ecosystem, this is normally done with the uber-popular `python-dotenv`.  Basically, you setup a `.env` file with name value/pairs to be exported to your environment. Once exported to your environment, they can be referred to using variables through use of Python's built-in `os` module.  Follow the instructions and kick the tires on the demo to see it in action.
+In the Python ecosystem, this is normally done with the uber-popular `python-dotenv`.  Basically, you setup a `.env` file with name/value pairs to be exported to your OS environment. Once exported to your environment, they can be referred to using variables via Python's built-in `os` module.  Follow the instructions and kick the tires on the demo to see it in action.
 
 ## How Do I Insert Data From a `dataframe` Into a MySQL Table?
 
 Most commonly, [to_sql()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_sql.html) is used to dump the contents of the `dataframe` into a database table.  I think this pretty much requires the use of `SQLAlchemy` but don't quote me on that.  There also appears to be a series of iteration methods, e.g., [iterrows()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.iterrows.html) that can be used to loop over the data, but the docs clearly say that modifications of these iterables is not safe.
 
-If you end up needing to **merge** data, I would recommend doing that in the database, via SQL.  Devil in the details on that one...
+If you end up needing to **merge** data, I would recommend doing that in the database, using SQL and some creative combination of DML/DDL.  Devil in the details on that one...
 
 ## How Should I Go About Handling Errors?
 
