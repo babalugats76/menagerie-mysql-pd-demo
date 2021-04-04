@@ -16,7 +16,7 @@ MYSQL_DATABASE=xxxxx
 * Run `pets.ipynb` which basically just wraps a call to `%run pets.py` (alternatively, `python pets.py`)
 * Review `pets.py` in detail
 
-## Which MySQL Client Should I Use and When?
+## Which MySQL Client Library Should I Use and When?
 
 For this project, it would probably be best to use some combination of `SQLAlchemy` and/or `pymysql`. `SQLAlchemy` appears to be very tightly-coupled with `pandas` sql functionality.  I set up the demo to accommodate either; in the end, they are not mutually exclusive.  Which one you need (or both) is tied directly to what you will be doing and, in particular, which Pandas methods you will be employing in your solutions.
 
