@@ -66,7 +66,7 @@ def getPyConnection():
     """
     try:
         conn = pymysql.connect(host=host, port=port, user=user, passwd=password, db=database)
-        print('Established connection to %s@%s:%s\n' % (database, host, str(port)))
+        print('Establishing connection to %s@%s:%s\n' % (database, host, str(port)))
         return conn
     except: 
         print("Unable to connect to database using pymysql", sys.exc_info()[0])
@@ -95,7 +95,7 @@ def getSaConnection(echo = False):
         # print('sqlalchemy connect string\n%s' % connString)
         # pass in echo=True to debug
         cnx = sa.create_engine(connString, echo=echo)
-        print('Established connection to %s@%s:%s' % (database, host, str(port)))
+        print('Establishing connection to %s@%s:%s' % (database, host, str(port)))
         return cnx
     except:
         print("Unable to create sqlalchemy engine (check credentials)", sys.exc_info()[0])
